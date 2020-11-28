@@ -83,7 +83,7 @@ function App() {
   //function of remove item
   const removeItem = (ID) =>{
    
-    if (isEditing){
+    if (isEditing && editID === ID){
       //alert is editing
       showAlert(true, 'finish editing first', 'warning');
     }
@@ -109,8 +109,8 @@ function App() {
   })
 
   return (
-    <div className='shopping-buddy container'>
-      <div className='row'>
+    <div className='shopping-buddy container bg-light border shadow pb-3'>
+      <div className='row no-gutters'>
         <h2 className='add-heading text-left col my-4'>Shopping Buddy</h2>
         {alert.show && <Alert className='col' {...alert} removeAlert={showAlert}/>}
       </div>
