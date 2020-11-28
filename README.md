@@ -1,6 +1,7 @@
 # Shopping Buddy
 
 This is a straightforward shopping buddy app with clear UI:
+
 ![](src/demo.png)
 
 The app is build up with react framework and styled with bootstrap4.
