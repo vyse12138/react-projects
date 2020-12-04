@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import List from '../components/List';
-import Alert from '../components/Alert';
+import List from '../components/ShoppingBuddy/List';
+import Alert from '../components/ShoppingBuddy/Alert';
 function ShoppingBuddy() {
 
 
@@ -32,7 +32,7 @@ function ShoppingBuddy() {
 
   const handleOnSubmit = e => {
     e.preventDefault();
-
+    
     if(!name){
       //alert warning of empty input
       showAlert(true, 'Please enter the item', 'warning')

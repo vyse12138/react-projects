@@ -9,17 +9,15 @@ import {
 import Navigation from './components/Navigation'
 import Home from './pages/Home'
 import ShoppingBuddy from './pages/ShoppingBuddy'
+import Clock from './pages/Clock'
 
 import About from './pages/About'
 import Error from './pages/Error'
 function App() {
   return (
 
-    
     <Router>
-
       <Navigation/>
-
 
       <Switch>
         <Route exact path="/">
@@ -29,16 +27,18 @@ function App() {
           <ShoppingBuddy/>
         </Route>
 
+        <Route path="/Clock">
+          <Clock/>
+        </Route>
+
         <Route path="/About">
           <About/>
         </Route>
+        
         <Route path="*">
           <Error/>
         </Route>
       </Switch>
-
-
-
 
     </Router>
    

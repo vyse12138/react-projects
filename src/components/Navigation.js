@@ -15,13 +15,17 @@ const Navigation = () => {
             <Link className='nav-link' to="/">Home</Link>
           </li>
           <li className='nav-item'> 
-            <Link className='nav-link' to="/ShoppingBuddy">ShoppingBuddy</Link>
+            <Link className='nav-link' to="/ShoppingBuddy">Shopping Buddy</Link>
+          </li>
+
+          <li className='nav-item'> 
+            <Link className='nav-link' to="/Clock">Clock</Link>
           </li>
 
           <li className='nav-item'> 
             <Link className='nav-link' to="/About">About</Link>
-          </li>          
-        </ul>
+          </li>
+        </ul>  
     </div>
   );
 }
