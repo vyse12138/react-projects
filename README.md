@@ -1,7 +1,7 @@
 # React Pages
 Using react to implement small projects.
 
-## Shopping Buddy
+## 1. Shopping Buddy
 
 This is a straightforward shopping buddy app with clear UI:
 
@@ -22,7 +22,7 @@ The app is build up with react framework and styled with bootstrap4.
 * Check if the item enter is alread exsited in the list
 * Remove item is disable when editing it
 
-## Clock
+## 2. Clock
 This is a clock app that tells you time is ticking.
 ![](src/ClockDemo.png)
 
