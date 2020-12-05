@@ -23,7 +23,7 @@ The app is build up with react framework and styled with bootstrap4.
 * Remove item is disable when editing it
 
 ## 2. Clock
-This is a clock app that tells you time is ticking.
+This is a clock app that tells you time is ticking:
 ![](src/ClockDemo.png)
 
 ### Function of the app

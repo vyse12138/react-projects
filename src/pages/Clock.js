@@ -21,7 +21,7 @@ function Clock() {
             setSecond(date.getSeconds().toString().padStart(2, '0'));
         }, 1000);
         return () => clearInterval(timer);
-    });
+    },[second]);
 
     //representing current time
     const [currentTime, setCurrentTime] = useState('');
@@ -76,7 +76,6 @@ function Clock() {
     }
 
 
-
     let counts = (
         `${countMinute.toString().padStart(2, '0')}:
         ${countSecond.toString().padStart(2, '0')}.
@@ -84,7 +83,7 @@ function Clock() {
     
     //clock elements
     let clockDate =`${year}/${month}/${day}`;
-    let clockTime = (date.getSeconds()%2) 
+    let clockTime = (second%2) 
                     ? `${hour}:${minute}:${second}`
                     : `${hour} ${minute} ${second}`;
     return(
