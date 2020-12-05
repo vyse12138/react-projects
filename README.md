@@ -36,7 +36,7 @@ This is a clock app that tells you time is ticking:
 ## 3. Tic Tac Toe
 TicTacToe game implemented using react state hooks:
 
-![](src/demo/ClockDemo.png)
+![](src/demo/TicTacToeDemo.png)
 
 ### Function of the app
 
