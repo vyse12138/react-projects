@@ -1,5 +1,4 @@
-
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef} from 'react';
 
 function Clock() {
 
@@ -25,13 +24,57 @@ function Clock() {
 
     })
 
+    const [currentTime, setCurrentTime] = useState();
+    const handleOnGetTime = () =>{
+        setCurrentTime(`${hour}:${minute}:${second}`);
+    }
+
+    const [count, setCount] = useState(0);
+
+    const counter = useRef(null)
+    const handleOnStart = () =>{
+        
+        counter.current = setInterval(() => {
+            setCount((count) => count +1);
+
+        }, 1000);
+    }
+
+    const handleOnStop = () =>{
+        clearInterval(counter.current)
+    }
+
+
+    const handleOnReset = () =>{
+        clearInterval(counter.current);
+        setCount(0);
+    }
     let clockDate =`${year}/${month}/${day}`;
-    let clockTime =`${hour}:${minute}:${second}`;
+    let clockTime = (date.getSeconds()%2) 
+                    ? `${hour}:${minute}:${second}`
+                    : `${hour} ${minute} ${second}`;
     return(
         <div className="clock container bg-light border-top-0 shadow py-2">
             <div className="date text-center  text-dark display-1 font-weight-bold">{clockDate}</div>
             <div className="time text-center text-dark  display-1 font-weight-bold pb-2">{clockTime}</div>
-	    </div>
+	    
+            <div className="container row  no-gutters bg-light border shadow py-2 my-2">
+                <button className='btn btn-primary' onClick={()=>handleOnGetTime()}>Get Time</button>
+
+                <h4 className='  mx-3'>{currentTime}</h4>
+	        </div>
+            <div className="container row  no-gutters bg-light border shadow py-2 my-2">
+                
+                
+                <h4 className='col-1 my-1 mx-3'>{count}</h4>
+
+                <button className='btn btn-success mr-3' onClick={()=>handleOnStart()}>Start</button>
+                <button className='btn btn-warning mr-3' onClick={()=>handleOnStop()}>Stop</button>
+                <button className='btn btn-danger' onClick={()=>handleOnReset()}>Reset</button>
+
+	        </div>
+        </div>
+        
     )
 
 }
