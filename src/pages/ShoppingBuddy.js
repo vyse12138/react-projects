@@ -107,7 +107,7 @@ function ShoppingBuddy() {
   })
 
   return (
-    <div className='shopping-buddy container bg-light border shadow pb-3'>
+    <div className='shopping-buddy container bg-light border-top-0 shadow pb-3'>
       <div className='row no-gutters'>
         <h2 className='add-heading text-left col my-4'>Shopping Buddy</h2>
         {alert.show && <Alert className='col' {...alert} removeAlert={showAlert}/>}

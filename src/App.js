@@ -1,4 +1,4 @@
-import './bootstrap.min.css'
+import './style/bootstrap.min.css'
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,7 +10,7 @@ import Navigation from './components/Navigation'
 import Home from './pages/Home'
 import ShoppingBuddy from './pages/ShoppingBuddy'
 import Clock from './pages/Clock'
-
+import TicTacToe from './pages/TicTacToe'
 import About from './pages/About'
 import Error from './pages/Error'
 function App() {
@@ -29,6 +29,10 @@ function App() {
 
         <Route path="/Clock">
           <Clock/>
+        </Route>
+
+        <Route path="/TicTacToe">
+          <TicTacToe/>
         </Route>
 
         <Route path="/About">

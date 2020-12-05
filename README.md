@@ -5,7 +5,7 @@ Using react to implement small projects.
 
 This is a straightforward shopping buddy app with clear UI:
 
-![](src/ShoppingBuddyDemo.png)
+![](src/demo/ShoppingBuddyDemo.png)
 
 The app is build up with react framework and styled with bootstrap4.
 
@@ -24,10 +24,21 @@ The app is build up with react framework and styled with bootstrap4.
 
 ## 2. Clock
 This is a clock app that tells you time is ticking:
-![](src/ClockDemo.png)
+
+![](src/demo/ClockDemo.png)
 
 ### Function of the app
 
 * Display the current time
 * Retrieve the current time 
 * Counter
+
+## 3. Tic Tac Toe
+TicTacToe game implemented using react state hooks:
+
+![](src/demo/ClockDemo.png)
+
+### Function of the app
+
+* Play Tic Tac Toe!
+

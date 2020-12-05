@@ -20,6 +20,10 @@ const Navigation = () => {
 
           <li className='nav-item'> 
             <Link className='nav-link' to="/Clock">Clock</Link>
+          </li>          
+          
+          <li className='nav-item'> 
+            <Link className='nav-link' to="/TicTacToe">Tic Tac Toe</Link>
           </li>
 
           <li className='nav-item'> 
