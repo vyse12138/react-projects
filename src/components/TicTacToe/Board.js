@@ -10,7 +10,6 @@ const Board = ({onClick, currentBoard}) => {
         return <Square onClick={() => onClick(i)} currentSquare={currentBoard[i]}/>;
     }
 
-    
     return (
         <div>
             <div className="board-row">

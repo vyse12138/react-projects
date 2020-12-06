@@ -14,15 +14,16 @@ function ShoppingBuddy() {
     }
   }
 
-  const [name, setName] = useState('');
-  const [list, setList] = useState(getLocalStorage());
-  const [isEditing, setIsEditing] = useState(false);
-  const [editID, setEditID] = useState(null);
-  const [alert, setAlert] = useState({
-    show:false, 
-    msg:'', 
-    color:''
-  });
+  const [name, setName] = useState(''),
+    [list, setList] = useState(getLocalStorage()),
+    [isEditing, setIsEditing] = useState(false),
+    [editID, setEditID] = useState(null),
+    [alert, setAlert] = useState({
+      show:false, 
+      msg:'', 
+      color:''
+    });
+
 
   //function called to show alert
   const showAlert = (show=false, msg='', color='') => {
@@ -55,7 +56,7 @@ function ShoppingBuddy() {
     }
     else{
       const newItem = {ID:name, title:name};
-      if (list.some(e => e.title == newItem.title)){
+      if (list.some(e => e.title === newItem.title)){
         //alert item inlcuded
         showAlert(true, 'Item exsits in the list', 'warning')
       }

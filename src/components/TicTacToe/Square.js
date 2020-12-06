@@ -2,7 +2,6 @@ import React from 'react'
 import '../../style/Square.css'
 const Square = ({onClick, currentSquare}) => {
 
-    
     return (
         <button 
             onClick={() => onClick()}
