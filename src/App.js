@@ -32,6 +32,10 @@ function App() {
           <Cocktails/>
         </Route>
 
+        <Route path="/Cocktails/:id">
+          <Cocktails/>
+        </Route>
+
         <Route path="/Clock">
           <Clock/>
         </Route>

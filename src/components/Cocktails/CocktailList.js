@@ -1,21 +1,32 @@
 import React from 'react'
 
 import { useCocktailContext } from './CocktailContext'
-
+import Loading from './Loading'
+import Cocktail from './Cocktail'
 
 const CocktailList = () => {
     const { cocktails, loading } = useCocktailContext();
     if (loading) {
         return (
-            <div>
-                loading...
-            </div>
+            <Loading/>
+        )
+    }
+    else if (cocktails === []){
+        return (
+            <h2>
+                nothing found
+            </h2>
         )
     }
 
     return (
         <div>
-            <h2>cocktail list component</h2>
+            <h2 className='text-center'>cocktail list</h2>
+            <div className='row justify-content-around'>
+                {cocktails.map((item)=> {
+                    return <Cocktail key={item.id} {...item}></Cocktail>
+                })}
+            </div>
         </div>
     )
 }
