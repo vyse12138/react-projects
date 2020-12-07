@@ -6,13 +6,14 @@ import {
   Link
 } from "react-router-dom";
 
-import Navigation from './components/Navigation'
-import Home from './pages/Home'
-import ShoppingBuddy from './pages/ShoppingBuddy'
-import Clock from './pages/Clock'
-import TicTacToe from './pages/TicTacToe'
-import About from './pages/About'
-import Error from './pages/Error'
+import Navigation from './components/Navigation';
+import Home from './pages/Home';
+import ShoppingBuddy from './pages/ShoppingBuddy';
+import Clock from './pages/Clock';
+import TicTacToe from './pages/TicTacToe';
+import About from './pages/About';
+import Error from './pages/Error';
+import Cocktails from './pages/Cocktails';
 function App() {
   return (
 
@@ -25,6 +26,10 @@ function App() {
         </Route>
         <Route path="/ShoppingBuddy">
           <ShoppingBuddy/>
+        </Route>
+
+        <Route path="/Cocktails">
+          <Cocktails/>
         </Route>
 
         <Route path="/Clock">

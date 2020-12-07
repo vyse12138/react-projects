@@ -9,7 +9,7 @@ function TicTacToe() {
 
     const handleOnClick = (i) => {
         //disable onclick when the square is filled or there is a winner
-        if (calculateWinner(currentBoard) || currentBoard[i]){
+        if (calculateWinner(currentBoard) || currentBoard[i]) {
             return;
         }
         //update new board
@@ -18,10 +18,10 @@ function TicTacToe() {
         setCurrentBoard(currentBoardTemp);
         setXIsNext(!xIsNext);
         setStepNumber(stepNumber => stepNumber + 1);
- 
+
     }
 
-    const handleOnReset = () =>{
+    const handleOnReset = () => {
         //clear everything
         setCurrentBoard(Array(9).fill(null));
         setXIsNext(true);
@@ -39,33 +39,33 @@ function TicTacToe() {
             [2, 5, 8],
             [0, 4, 8],
             [2, 4, 6],
-          ];
+        ];
         //check if current board matches the winning situation
         for (let i = 0; i < lines.length; i++) {
             const [a, b, c] = lines[i];
-            if(
-                squares[a] && 
-                squares[a] === squares[b] && 
+            if (
+                squares[a] &&
+                squares[a] === squares[b] &&
                 squares[a] === squares[c]
-            ){
+            ) {
                 return squares[a];
             }
-    
+
         }
         return null;
     }
 
-    const info = calculateWinner(currentBoard) ? `Winner is ${calculateWinner(currentBoard)}` : 
-    stepNumber === 9 ? 'Draw' :
-    (`Next player: ${xIsNext? 'X' : 'O'}`);
-    
+    const info = calculateWinner(currentBoard) ? `Winner is ${calculateWinner(currentBoard)}` :
+        stepNumber === 9 ? 'Draw' :
+            (`Next player: ${xIsNext ? 'X' : 'O'}`);
+
     return (
-    <div className='container bg-light text-center border-top-0 shadow pb-3'>
-        <Board onClick={(handleOnClick)} currentBoard={currentBoard}/>
-        
-        <div className='my-4 alert alert-primary'>{info}</div>
-        <button className='btn btn-primary px-5 py-2' onClick={handleOnReset}>Reset</button>
-    </div>
+        <div className='container bg-light text-center border-top-0 shadow pb-3'>
+            <Board onClick={(handleOnClick)} currentBoard={currentBoard} />
+
+            <div className='my-4 alert alert-primary'>{info}</div>
+            <button className='btn btn-primary px-5 py-2' onClick={handleOnReset}>Reset</button>
+        </div>
     );
 }
 
