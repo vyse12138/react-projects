@@ -22,7 +22,7 @@ const CocktailList = () => {
     return (
         <div>
             <h2 className='text-center'>cocktail list</h2>
-            <div className='row justify-content-around'>
+            <div className='card-columns'>
                 {cocktails.map((item)=> {
                     return <Cocktail key={item.id} {...item}></Cocktail>
                 })}
