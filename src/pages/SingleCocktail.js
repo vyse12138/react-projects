@@ -82,7 +82,7 @@ const SingleCocktail = () => {
       } = cocktail
     return (
         <div className='container bg-light border-top-0 shadow pt-4 pb-2'>
-            <img src={image} width='300px' height='300px'/>
+            <img src={image} alt={name} width='300px' height='300px'/>
             <h1>
                 {name}
             </h1>
