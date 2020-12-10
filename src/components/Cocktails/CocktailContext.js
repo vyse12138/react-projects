@@ -19,7 +19,8 @@ const CocktailContextProvider = ({ children }) => {
             console.log(drinks);
             if (drinks) {
                 const newCocktails = drinks.map((item) => {
-                    const { idDrink,
+                    const { 
+                        idDrink,
                         strAlcoholic,
                         strDrink,
                         strDrinkThumb,
@@ -34,7 +35,7 @@ const CocktailContextProvider = ({ children }) => {
                         }
                     )
                 })
-                console.log(newCocktails);
+                // console.log(newCocktails);
                 setCocktails(newCocktails);
             }
             else {

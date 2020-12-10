@@ -14,6 +14,7 @@ import TicTacToe from './pages/TicTacToe';
 import About from './pages/About';
 import Error from './pages/Error';
 import Cocktails from './pages/Cocktails';
+import SingleCocktail from './pages/SingleCocktail';
 function App() {
   return (
 
@@ -28,12 +29,12 @@ function App() {
           <ShoppingBuddy/>
         </Route>
 
-        <Route path="/Cocktails">
+        <Route exact path="/Cocktails">
           <Cocktails/>
         </Route>
 
         <Route path="/Cocktails/:id">
-          <Cocktails/>
+          <SingleCocktail/>
         </Route>
 
         <Route path="/Clock">
