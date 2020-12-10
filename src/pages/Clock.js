@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 function Clock() {
     //retrieve date data and store them in using state hooks
