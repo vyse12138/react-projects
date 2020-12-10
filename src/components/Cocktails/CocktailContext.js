@@ -9,17 +9,21 @@ const CocktailContextProvider = ({ children }) => {
     const [seachValue, setSearchValue] = useState('a');
     const [cocktails, setCocktails] = useState([]);
 
-    const fetchCocktail = async() => {
+    const fetchCocktail = async () => {
         setLoading(true);
-        try{
+        try {
             const response = await fetch(`${url}${seachValue}`);
             const data = await response.json();
 
-            const {drinks} = data;
+            const { drinks } = data;
             console.log(drinks);
-            if(drinks){
-                const newCocktails = drinks.map((item) =>{
-                    const {idDrink, strAlcoholic, strDrink, strDrinkThumb, strGlass} = item;
+            if (drinks) {
+                const newCocktails = drinks.map((item) => {
+                    const { idDrink,
+                        strAlcoholic,
+                        strDrink,
+                        strDrinkThumb,
+                        strGlass } = item;
                     return (
                         {
                             id: idDrink,
@@ -33,11 +37,11 @@ const CocktailContextProvider = ({ children }) => {
                 console.log(newCocktails);
                 setCocktails(newCocktails);
             }
-            else{
+            else {
                 setCocktails([]);
             }
             setLoading(false);
-        } 
+        }
         catch (error) {
             console.log(error);
             setLoading(false);
@@ -48,7 +52,7 @@ const CocktailContextProvider = ({ children }) => {
         fetchCocktail();
 
 
-    },[seachValue])
+    }, [seachValue])
 
     return (
         <CocktailContext.Provider value={{ loading, cocktails, setSearchValue }}>

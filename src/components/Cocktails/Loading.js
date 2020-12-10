@@ -3,9 +3,9 @@ import React from 'react'
 const Loading = () => {
 
   return (
-    <div className='text-center blockquote'>
+    <h2 className='text-center my-4'>
         Loading...
-    </div>
+    </h2>
   );
 }
 

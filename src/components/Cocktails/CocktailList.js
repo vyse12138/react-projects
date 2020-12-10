@@ -11,17 +11,17 @@ const CocktailList = () => {
             <Loading/>
         )
     }
-    else if (cocktails === []){
+    if (cocktails.length == 0){
         return (
-            <h2>
-                nothing found
+            <h2 className='text-center my-4'>
+                Nothing Found
             </h2>
         )
     }
 
     return (
         <div>
-            <h2 className='text-center'>cocktail list</h2>
+            <h2 className='text-center my-4'>Cocktail Matches</h2>
             <div className='card-columns'>
                 {cocktails.map((item)=> {
                     return <Cocktail key={item.id} {...item}></Cocktail>
