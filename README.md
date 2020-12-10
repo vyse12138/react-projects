@@ -1,5 +1,7 @@
 # React Pages
 Using react to implement small projects.
+Demo can be found on:
+react-pages.netlify.app
 
 ## 1. Shopping Buddy
 
@@ -41,4 +43,17 @@ TicTacToe game implemented using react state hooks:
 ### Function of the app
 
 * Play Tic Tac Toe!
+
+
+## 4. Cocktail's recipe
+Fetching data from a cocktail database and display in this page:
+
+![](src/demo/CocktailDemo.png)
+
+### Function of the app
+
+* Display a list of cocktails
+* Search for cocktail
+* Details of a single cocktail
+
 
