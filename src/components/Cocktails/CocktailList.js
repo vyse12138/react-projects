@@ -11,7 +11,7 @@ const CocktailList = () => {
             <Loading/>
         )
     }
-    if (cocktails.length == 0){
+    if (cocktails.length === 0){
         return (
             <h2 className='text-center my-4'>
                 Nothing Found

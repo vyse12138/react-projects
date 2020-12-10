@@ -9,7 +9,7 @@ function Clock() {
     const [hour, setHour] = useState(date.getHours().toString().padStart(2, '0'));
     const [minute, setMinute] = useState(date.getMinutes().toString().padStart(2, '0'));
     const [second, setSecond] = useState(date.getSeconds().toString().padStart(2, '0'));
-    let a = useEffect(() => {
+    useEffect(() => {
         let timer = setInterval(() => {
             //retrieve adn set date data each second
             let date = new Date();
@@ -30,7 +30,7 @@ function Clock() {
     }
 
     //counter datas
-    const [count, setCount] = useState('');
+
     const [countStarted, setCountStarted] = useState(false);
     const [countMinute, setCountMinute] = useState(0);
     const [countSecond, setCountSecond] = useState(0);
