@@ -1,7 +1,9 @@
 # React Pages
 Using react to implement small projects.
+
 Demo can be found on:
-react-pages.netlify.app
+
+https://react-pages.netlify.app/
 
 ## 1. Shopping Buddy
 
