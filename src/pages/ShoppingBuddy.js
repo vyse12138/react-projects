@@ -111,8 +111,10 @@ function ShoppingBuddy() {
     return (
         <div className='shopping-buddy container bg-light border-top-0 shadow pb-3'>
             <div className='row no-gutters'>
-                <h2 className='add-heading text-left col my-4'>Shopping Buddy</h2>
-                {alert.show && <Alert className='col' {...alert} removeAlert={showAlert} />}
+                <h2 className='text-left col-3 my-4'>Shopping Buddy</h2>
+                <div className='col-9 '>
+                    {alert.show && <Alert  {...alert} removeAlert={showAlert} />}
+                </div>
             </div>
             <form
                 className='add-item input-group'

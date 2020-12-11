@@ -8,7 +8,7 @@ const Alert = ({ msg, color, removeAlert }) => {
         return () => clearTimeout(timeout);
     })
     return (
-        <div className={`mt-4 py-2  col text-center alert alert-${color}`}>{msg}</div>
+        <div className={`mt-4 py-2 w-50 text-center alert alert-${color}`}>{msg}</div>
     );
 }
 
