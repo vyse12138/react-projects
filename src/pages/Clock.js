@@ -44,7 +44,7 @@ function Clock() {
             //tick the counter each second
             counter = setInterval(() => {
                 setCountSecond(countSecond => countSecond + 1);
-                if (countSecond == 59) {
+                if (countSecond === 59) {
                     setCountSecond(0);
                     setCountMinute(countMinute => countMinute + 1);
                 }
@@ -88,18 +88,18 @@ function Clock() {
         : `${hour} ${minute} ${second}`;
     return (
         <div className="clock container bg-light border-top-0 shadow py-2">
-            <div className="date text-center  text-dark display-1 font-weight-bold">{clockDate}</div>
-            <div className="time text-center text-dark  display-1 font-weight-bold pb-2">{clockTime}</div>
+            <h1 className="date text-center  text-dark display-3 font-weight-bold">{clockDate}</h1>
+            <h1 className="time text-center text-dark  display-3 font-weight-bold pb-2">{clockTime}</h1>
 
             <div className="container row  no-gutters bg-light border shadow py-2 my-2">
-                <h4 className='col-2 my-1 mx-3'>{currentTime}</h4>
+                <h4 className='col-2 my-1 mx-2'>{currentTime}</h4>
                 <button className='btn btn-primary' onClick={() => handleOnGetTime()}>Get Time</button>
             </div>
 
             <div className="container row  no-gutters bg-light border shadow py-2 my-2">
-                <h4 className='col-2 my-1 mx-3'>{counts}</h4>
-                <button className='btn btn-success mr-3' onClick={() => setCountStarted(true)}>Start</button>
-                <button className='btn btn-warning mr-3' onClick={() => setCountStarted(false)}>Stop</button>
+                <h4 className='col-2 my-1 mx-2'>{counts}</h4>
+                <button className='btn btn-success mr-2' onClick={() => setCountStarted(true)}>Start</button>
+                <button className='btn btn-warning mr-2' onClick={() => setCountStarted(false)}>Stop</button>
                 <button className='btn btn-danger' onClick={() => handleOnClear()}>Reset</button>
 
             </div>
