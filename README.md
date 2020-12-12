@@ -1,7 +1,9 @@
 # React Pages
-Using react to implement small projects.
-Styled with bootstrap4.
-Demo can be found on:
+Using react to implement small projects. 
+
+Styled with bootstrap4. 
+
+Demo can be found on: 
 
 https://react-pages.netlify.app/
 ***
