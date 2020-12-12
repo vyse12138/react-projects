@@ -5,6 +5,7 @@ import ShoppingBuddyDemo from '../../demo/ShoppingBuddyDemo.png'
 import ClockDemo from '../../demo/ClockDemo.png'
 import CocktailDemo from '../../demo/CocktailDemo.png'
 import TicTacToeDemo from '../../demo/TicTacToeDemo.png'
+import Markdown from '../../demo/MarkdownDemo.png';
 const HomeCard = () => {
 
     const cards = [
@@ -27,7 +28,12 @@ const HomeCard = () => {
             img: TicTacToeDemo,
             name: 'TicTacToe',
             link: '/TicTacToe'
-        }
+        },
+        {   
+            img: Markdown,
+            name: 'Markdown',
+            link: '/Markdown'
+        },
         
     ]
 
