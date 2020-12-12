@@ -20,8 +20,8 @@ const HomeCard = () => {
         },
         {
             img: CocktailDemo,
-            name: 'Cocktail',
-            link: '/Cocktail'
+            name: 'Cocktails',
+            link: '/Cocktails'
         },
         {
             img: TicTacToeDemo,

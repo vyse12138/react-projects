@@ -13,7 +13,9 @@ import TicTacToe from './pages/TicTacToe';
 import About from './pages/About';
 import Error from './pages/Error';
 import Cocktails from './pages/Cocktails';
+import Markdown from './pages/Markdown';
 import SingleCocktail from './pages/SingleCocktail';
+
 function App() {
   return (
 
@@ -42,6 +44,10 @@ function App() {
 
         <Route path="/TicTacToe">
           <TicTacToe/>
+        </Route>
+
+        <Route path="/Markdown">
+          <Markdown/>
         </Route>
 
         <Route path="/About">
