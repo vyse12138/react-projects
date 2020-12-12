@@ -1,18 +1,18 @@
 # React Pages
 Using react to implement small projects.
-
+Styled with bootstrap4.
 Demo can be found on:
 
 https://react-pages.netlify.app/
 ***
+
 ## 1. Shopping Buddy
 
 This is a straightforward shopping buddy app with clear UI:
 
 ![](src/demo/ShoppingBuddyDemo.png)
 
-The app is build up with react framework and styled with bootstrap4.
-***
+
 ### Function of the app
 
 * Add new item to the shopping list
