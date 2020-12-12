@@ -4,7 +4,7 @@ Using react to implement small projects.
 Demo can be found on:
 
 https://react-pages.netlify.app/
-
+***
 ## 1. Shopping Buddy
 
 This is a straightforward shopping buddy app with clear UI:
@@ -12,7 +12,7 @@ This is a straightforward shopping buddy app with clear UI:
 ![](src/demo/ShoppingBuddyDemo.png)
 
 The app is build up with react framework and styled with bootstrap4.
-
+***
 ### Function of the app
 
 * Add new item to the shopping list
@@ -25,6 +25,7 @@ The app is build up with react framework and styled with bootstrap4.
 * Check if the item enter is empty
 * Check if the item enter is alread exsited in the list
 * Remove item is disable when editing it
+***
 
 ## 2. Clock
 This is a clock app that tells you time is ticking:
@@ -36,6 +37,7 @@ This is a clock app that tells you time is ticking:
 * Display the current time
 * Retrieve the current time 
 * Counter
+***
 
 ## 3. Tic Tac Toe
 TicTacToe game implemented using react state hooks:
@@ -45,9 +47,9 @@ TicTacToe game implemented using react state hooks:
 ### Function of the app
 
 * Play Tic Tac Toe!
+***
 
-
-## 4. Cocktail's recipe
+## 4. Cocktail's Recipe
 Fetching data from a cocktail database and display in this page:
 
 ![](src/demo/CocktailDemo.png)
@@ -57,5 +59,15 @@ Fetching data from a cocktail database and display in this page:
 * Display a list of cocktails
 * Search for cocktail
 * Details of a single cocktail
+***
 
+## 5. Markdown Preview
+Edit markdown and get real time feedback
+
+![](src/demo/MarkdownDemo.png)
+
+### Function of the app
+
+* edit markdown 
+* real time feedback
 

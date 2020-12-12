@@ -7,7 +7,7 @@ function Markdown() {
     useEffect(() => {
         textArea.current.focus();
         textArea.current.selectionStart = 18;
-    })
+    },[])
 
     return (
         <div className='container py-3 shadow border'>
