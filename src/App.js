@@ -15,6 +15,7 @@ import Error from './pages/Error';
 import Cocktails from './pages/Cocktails';
 import Markdown from './pages/Markdown';
 import SingleCocktail from './pages/SingleCocktail';
+import Animate from './pages/Animate';
 
 function App() {
   return (
@@ -53,7 +54,11 @@ function App() {
         <Route path="/About">
           <About/>
         </Route>
-        
+
+        <Route path="/Animate">
+          <Animate/>
+        </Route>
+
         <Route path="*">
           <Error/>
         </Route>

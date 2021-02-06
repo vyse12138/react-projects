@@ -35,6 +35,10 @@ const Navigation = () => {
                 <li className='nav-item'>
                     <Link className='nav-link' to="/About">About</Link>
                 </li>
+
+                <li className='nav-item'>
+                    <Link className='nav-link' to="/Animate">Animate</Link>
+                </li>
             </ul>
         </div>
     );
