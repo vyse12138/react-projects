@@ -1,4 +1,4 @@
-# React Pages
+# react pages
 Using react to implement small projects. 
 
 Styled with bootstrap4. 
