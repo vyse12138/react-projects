@@ -1,5 +1,5 @@
-# react-pages
-Using react to implement small projects. 
+# react-projects
+Some small projects in React. 
 
 Styled with bootstrap4. 
 
