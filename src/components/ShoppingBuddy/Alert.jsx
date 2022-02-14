@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react'
 
 const Alert = ({ msg, color, removeAlert }) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
-      removeAlert();
-    }, 2000);
-    return () => clearTimeout(timeout);
-  });
+      removeAlert()
+    }, 2000)
+    return () => clearTimeout(timeout)
+  })
   return (
     <div className={`mt-4 py-2 w-50 text-center alert alert-${color}`}>
       {msg}
     </div>
-  );
-};
+  )
+}
 
-export default Alert;
+export default Alert

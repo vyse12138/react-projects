@@ -1,130 +1,130 @@
-import { useEffect, useState } from "react";
-import List from "../components/ShoppingBuddy/List";
-import Alert from "../components/ShoppingBuddy/Alert";
+import { useEffect, useState } from 'react'
+import List from '../components/ShoppingBuddy/List'
+import Alert from '../components/ShoppingBuddy/Alert'
 function ShoppingBuddy() {
   const getLocalStorage = () => {
-    let list = localStorage.getItem("list");
+    let list = localStorage.getItem('list')
     if (list) {
-      return JSON.parse(list);
+      return JSON.parse(list)
     } else {
-      return [];
+      return []
     }
-  };
+  }
 
-  const [name, setName] = useState(""),
+  const [name, setName] = useState(''),
     [list, setList] = useState(getLocalStorage()),
     [isEditing, setIsEditing] = useState(false),
     [editID, setEditID] = useState(null),
     [alert, setAlert] = useState({
       show: false,
-      msg: "",
-      color: "",
-    });
+      msg: '',
+      color: ''
+    })
 
   //function called to show alert
-  const showAlert = (show = false, msg = "", color = "") => {
+  const showAlert = (show = false, msg = '', color = '') => {
     setAlert({
       show,
       msg,
-      color,
-    });
-  };
+      color
+    })
+  }
 
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
+  const handleOnSubmit = e => {
+    e.preventDefault()
 
     if (!name) {
       //alert warning of empty input
-      showAlert(true, "Please enter the item", "warning");
+      showAlert(true, 'Please enter the item', 'warning')
     } else if (isEditing) {
       //editing
       setList(
-        list.map((item) => {
+        list.map(item => {
           if (item.ID === editID) {
-            return { ID: name, title: name };
+            return { ID: name, title: name }
           }
-          return item;
+          return item
         })
-      );
-      setName("");
-      setEditID(null);
-      setIsEditing(false);
+      )
+      setName('')
+      setEditID(null)
+      setIsEditing(false)
       //alert item changed
-      showAlert(true, "Item changed", "success");
+      showAlert(true, 'Item changed', 'success')
     } else {
-      const newItem = { ID: name, title: name };
-      if (list.some((e) => e.title === newItem.title)) {
+      const newItem = { ID: name, title: name }
+      if (list.some(e => e.title === newItem.title)) {
         //alert item inlcuded
-        showAlert(true, "Item exsits in the list", "warning");
+        showAlert(true, 'Item exsits in the list', 'warning')
       } else {
         //add item
-        setList([...list, newItem]);
-        setName("");
+        setList([...list, newItem])
+        setName('')
         //alert success
-        showAlert(true, "Item added", "success");
+        showAlert(true, 'Item added', 'success')
       }
     }
-  };
+  }
 
   //function of clear list
   const clearList = () => {
     //clear the list
-    setList([]);
+    setList([])
     //alert list cleared
-    showAlert(true, "all items cleared", "danger");
-  };
+    showAlert(true, 'all items cleared', 'danger')
+  }
 
   //function of remove item
-  const removeItem = (ID) => {
+  const removeItem = ID => {
     if (isEditing && editID === ID) {
       //alert is editing
-      showAlert(true, "finish editing first", "warning");
+      showAlert(true, 'finish editing first', 'warning')
     } else {
       //clear the list
-      setList(list.filter((item) => item.ID !== ID));
+      setList(list.filter(item => item.ID !== ID))
       //alert item removed
-      showAlert(true, "item removed", "danger");
+      showAlert(true, 'item removed', 'danger')
     }
-  };
+  }
 
   //function to edit item
-  const editItem = (ID) => {
-    const item = list.find((item) => item.ID === ID);
-    setIsEditing(true);
-    setEditID(ID);
-    setName(item.title);
-  };
+  const editItem = ID => {
+    const item = list.find(item => item.ID === ID)
+    setIsEditing(true)
+    setEditID(ID)
+    setName(item.title)
+  }
 
   useEffect(() => {
-    localStorage.setItem("list", JSON.stringify(list));
-  });
+    localStorage.setItem('list', JSON.stringify(list))
+  })
 
   return (
-    <div className="shopping-buddy container bg-light border-top-0 shadow pb-3">
-      <div className="row no-gutters">
-        <h2 className="text-left col-3 my-4">Shopping Buddy</h2>
-        <div className="col-9 ">
+    <div className='shopping-buddy container bg-light border-top-0 shadow pb-3'>
+      <div className='row no-gutters'>
+        <h2 className='text-left col-3 my-4'>Shopping Buddy</h2>
+        <div className='col-9 '>
           {alert.show && <Alert {...alert} removeAlert={showAlert} />}
         </div>
       </div>
-      <form className="add-item input-group" onSubmit={handleOnSubmit}>
+      <form className='add-item input-group' onSubmit={handleOnSubmit}>
         <input
-          className="add-text form-control"
-          type="text"
-          placeholder="What you want to buy?"
+          className='add-text form-control'
+          type='text'
+          placeholder='What you want to buy?'
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={e => setName(e.target.value)}
         />
-        <button className="add-button btn btn-primary " type="submit">
-          {isEditing ? "Edit" : "Add"}
+        <button className='add-button btn btn-primary ' type='submit'>
+          {isEditing ? 'Edit' : 'Add'}
         </button>
       </form>
 
       {list.length > 0 && (
-        <div className="shopping-list">
+        <div className='shopping-list'>
           <List items={list} removeItem={removeItem} editItem={editItem} />
           <button
-            className="list-clear-button btn btn-secondary"
+            className='list-clear-button btn btn-secondary'
             onClick={() => clearList()}
           >
             clear all
@@ -132,7 +132,7 @@ function ShoppingBuddy() {
         </div>
       )}
     </div>
-  );
+  )
 }
 
-export default ShoppingBuddy;
+export default ShoppingBuddy
