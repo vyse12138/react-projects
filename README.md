@@ -4,8 +4,6 @@ Some small projects implemented in React.
 
 Demo can be found on:
 
-https://react-projects.yuleiz.com/
-
 ---
 
 ## 1. Shopping Buddy
